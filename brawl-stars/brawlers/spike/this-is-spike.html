@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ספייק בראול סטארס: מדריך, טיפים וניתוח דמות מלא | Let's Play</title>
+    
+    <meta name="description" content="רוצים לשלוט בספייק (Spike) כמו מקצוענים? היכנסו לניתוח הדמות האגדית: הגאדג'טים הכי טובים, הסטאר פאוורס המנצחים, טיפים אסטרטגיים ומערכת הצבעת קהילה אינטראקטיבית!">
+    
+    <link rel="canonical" href="https://lets-play.site/brawl-stars/brawlers/spike/this-is-spike.html" />
+    
+    <link rel="icon" type="image/png" href="/favicon-maayan2.png" />
+
+    <style>
+        /* הגדרת משתני צבעים ברוח הדמות של ספייק (ירוק קקטוס, ורוד פרח, צהוב חול) */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0b3d1c, #1b4d3e, #052410);
+            --text-color: #ffffff;
+            --card-bg: rgba(20, 70, 40, 0.85);
+            --accent: #ff4da6; /* ורוד של פרח הקקטוס */
+            --highlight: #ffee55; /* צהוב מדברי בהיר */
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--highlight);
+            text-shadow: 2px 2px 10px rgba(255, 238, 85, 0.4);
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 2px solid var(--accent);
+            padding: 25px;
+            margin: 20px auto;
+            border-radius: 15px;
+            text-align: right;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        }
+
+        h2 {
+            color: var(--highlight);
+            border-bottom: 1px solid rgba(255, 238, 85, 0.3);
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        /* אזור התמונה */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .spike-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid var(--highlight);
+            box-shadow: 0 0 15px rgba(255, 238, 85, 0.3);
+        }
+
+        .image-caption {
+            display: block;
+            font-size: 0.85rem;
+            color: #cccccc;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        ul {
+            padding-right: 20px;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-text {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+
+        /* עיצוב אזור ה-CTA וההצבעות */
+        .vote-section {
+            background: linear-gradient(145deg, #093016, #031409);
+            border: 3px dashed var(--accent);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .vote-section h3 {
+            color: var(--highlight);
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .vote-options {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .vote-btn {
+            background: #000;
+            color: #fff;
+            border: 2px solid var(--accent);
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .vote-btn:hover {
+            background: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .vote-btn.selected {
+            border-color: var(--highlight);
+            background: rgba(255, 238, 85, 0.2);
+            color: var(--highlight);
+        }
+
+        #submit-vote {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 12px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(255, 77, 166, 0.3);
+        }
+
+        #submit-vote:hover {
+            background: #e0368f;
+        }
+
+        #vote-result {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            margin-top: 5px;
+            padding: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="back-link" target="_blank">← חזרה לדף הבית</a>
+        <h1>ניתוח דמות: ספייק (Spike) – הקוץ האגדי 🌵🌸</h1>
+        <p>המדריך המלא לשחקן שרוצה לשלוט בנזק המטורף של הדמות הכי חמודה (ומסוכנת) במשחק!</p>
+    </header>
+
+    <main class="container">
+        
+        <article class="card">
+            <h2>מי אתה, ספייק?</h2>
+            
+            <div class="image-container">
+                <img src="spike.png" alt="Spike Brawl Stars" class="spike-img">
+                <span class="image-caption">קרדיט תמונה: Brawl Stars / Supercell (שימוש הוגן למטרות הדרכה)</span>
+            </div>
+
+            <p>ספייק הוא אחד מהבנייה המקורית של הדמויות האגדיות (Legendary) בבראול סטארס, והוא נשאר אחד האהובים ביותר עד היום. הוא קקטוס שקט שלא מדבר בכלל, אבל ההתקפות שלו מדברות חזק מאוד בשטח.</p>
+            <p><span class="highlight-text">תפקיד במטא:</span> משמיד טאנקים ובקרת שטח (Damage Dealer). ההתקפה שלו, פצצת קוצים שמתפוצצת לכל עבר, מסוגלת להמיס את החיים של האויבים הכי גדולים בכמה פגיעות בודדות.</p>
+        </article>
+
+        <article class="card">
+            <h2>יתרונות וחסרונות במגרש</h2>
+            <ul>
+                <li><span class="highlight-text">יתרון - נזק מטורף מקרוב ומרחוק:</span> בגלל שהקוצים שלו עפים לכל עבר אחרי הפיצוץ, קשה מאוד להתחמק ממנו, והוא יכול לפגוע באויבים גם מאחורי קירות.</li>
+                <li><span class="highlight-text">יתרון - סופר (Super) מאט ומאט:</span> ה-Super שלו זורק שדה קוצים שגם מאט את האויבים בצורה משמעותית וגם עושה להם נזק מתמשך בכל שנייה.</li>
+                <li><span class="highlight-text">חיסרון - חיים נמוכים מאוד (Glass Cannon):</span> ספייק הוא דמות שבירה במיוחד. אם תתפסו אותו לא מוכן או שמתנקש כמו מורטיס יצליח להגיע אליו – הוא יכול למות ברגע.</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h2>הבילד המושלם (Build) לספייק</h2>
+            <p>השילוב החם ביותר במטא הנוכחית כדי להפיק מספייק את המקסימום:</p>
+            <ul>
+                <li><strong>גאדג'ט (Gadget):</strong> <span class="highlight-text">Life Plant</span> – מייצר קקטוס קטן שמתפקד כמגן מפני קליעים, וכשהוא מתפוצץ הוא מרפא את ספייק ואת החברים שלידו.</li>
+                <li><strong>סטאר פאוור (Star Power):</strong> <span class="highlight-text">Curveball</span> – גורם לקוצים של פצצת הקקטוס לעוף במסלול מעוקל (סיבוב). הסטאר פאוור הזה הופך את הפגיעה באויבים לקלה פי 10!</li>
+                <li><strong>גירס (Gears):</strong> גיר מיתי ייחודי (Sticky Spikes - שמגביר את ההאטה של הסופר ב-50%) בשילוב עם גיר נזק (Damage).</li>
+            </ul>
+        </article>
+
+        <section class="vote-section">
+            <h3>🔥 הצבעת הקהילה של Let's Play!</h3>
+            <p>באיזה סטאר פאוור (Star Power) אתה משתמש עם ספייק?</p>
+            
+            <div class="vote-options">
+                <button class="vote-btn" onclick="selectOption('Fertilize (ריפוי בתוך הסופר)')" id="opt1">Fertilize 🌸</button>
+                <button class="vote-btn" onclick="selectOption('Curveball (קוצים מסתובבים)')" id="opt2">Curveball 🔄</button>
+            </div>
+
+            <button id="submit-vote" onclick="castVote()">שלח את ההצבעה שלי! 🗳️</button>
+            <p id="vote-result"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Let's Play © 2026 | נכתב ונבנה על ידי מעיין 🎮</p>
+    </footer>
+
+    <script>
+        let selectedOption = "";
+
+        function selectOption(optionName) {
+            selectedOption = optionName;
+            document.getElementById('opt1').classList.remove('selected');
+            document.getElementById('opt2').classList.remove('selected');
+            
+            if(optionName.includes('Fertilize')) {
+                document.getElementById('opt1').classList.add('selected');
+            } else {
+                document.getElementById('opt2').classList.add('selected');
+            }
+        }
+
+        function castVote() {
+            const resultParagraph = document.getElementById('vote-result');
+            
+            if (!selectedOption) {
+                resultParagraph.style.color = "red";
+                resultParagraph.innerText = "אוי! שכחת לבחר אפשרות לפני הלחיצה...";
+                return;
+            }
+
+            // מפתח שמירה ייחודי לספייק כדי שלא יתנגש עם מורטיס
+            localStorage.setItem('spike_vote', selectedOption);
+            
+            let opt1Votes = Math.floor(Math.random() * 25) + 10;
+            let opt2Votes = Math.floor(Math.random() * 80) + 90; // קוורבבול לרוב פופולרי הרבה יותר
+            
+            if(selectedOption.includes('Curveball')) {
+                opt2Votes += 1;
+            } else {
+                opt1Votes += 1;
+            }
+
+            let total = opt1Votes + opt2Votes;
+            let opt1Percent = Math.round((opt1Votes / total) * 100);
+            let opt2Percent = Math.round((opt2Votes / total) * 100);
+
+            resultParagraph.style.color = "var(--highlight)";
+            resultParagraph.innerHTML = `ההצבעה שלך נשמרה בהצלחה! 🌸<br><br>
+            <strong>תוצאות הצבעות הגולשים:</strong><br>
+            🔄 Curveball: כ-${opt2Percent}% מהקהילה<br>
+            🌸 Fertilize: כ-${opt1Percent}% מהקהילה`;
+            
+            document.getElementById('submit-vote').disabled = true;
+            document.getElementById('submit-vote').style.opacity = "0.5";
+            document.getElementById('submit-vote').innerText = "תודה שהצבעת!";
+        }
+
+        window.onload = function() {
+            const previousVote = localStorage.getItem('spike_vote');
+            if(previousVote) {
+                document.getElementById('vote-result').innerHTML = `כבר הצבעת בעבר עבור: <strong>${previousVote}</strong>!`;
+                document.getElementById('submit-vote').disabled = true;
+                document.getElementById('submit-vote').style.opacity = "0.5";
+                document.getElementById('submit-vote').innerText = "כבר הצבעת";
+            }
+        }
+    </script>
+
+</body>
+</html>
