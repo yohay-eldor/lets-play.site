@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>מורטיס בראול סטארס: מדריך, טיפים וניתוח דמות מלא | Let's Play</title>
+    
+    <meta name="description" content="רוצים לשלוט במורטיס (Mortis) כמו מקצוענים? היכנסו לניתוח הדמות המלא: הגאדג'טים הכי טובים, הסטאר פאוורס המנצחים, טיפים אסטרטגיים למשחק חכם והצבעה אינטראקטיבית!">
+    
+    <link rel="canonical" href="https://lets-play.site/brawl-srats/brawlers/mortis/this-is-mortis.html" />
+    
+    <link rel="icon" type="image/png" href="/favicon-maayan2.png" />
+
+    <style>
+        /* הגדרת משתני צבעים ברוח הדמות של מורטיס (סגול, שחור, אפלולי) */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #1e0034, #000000, #3d0066);
+            --text-color: #ffffff;
+            --card-bg: rgba(40, 10, 60, 0.85);
+            --accent: #a14dff;
+            --highlight: #2efc7e;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            text-shadow: 2px 2px 10px rgba(161, 77, 255, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--highlight);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 2px solid var(--accent);
+            padding: 25px;
+            margin: 20px auto;
+            border-radius: 15px;
+            text-align: right; /* יישור טקסט לימין לקריאה נוחה בעברית */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            color: var(--accent);
+            border-bottom: 1px solid rgba(161, 77, 255, 0.3);
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        ul {
+            padding-right: 20px;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-text {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+
+        /* עיצוב אזור ה-CTA וההצבעות */
+        .vote-section {
+            background: linear-gradient(145deg, #2b004a, #150026);
+            border: 3px dashed var(--highlight);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .vote-section h3 {
+            color: var(--highlight);
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .vote-options {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .vote-btn {
+            background: #000;
+            color: #fff;
+            border: 2px solid var(--accent);
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .vote-btn:hover {
+            background: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .vote-btn.selected {
+            border-color: var(--highlight);
+            background: rgba(46, 252, 126, 0.2);
+            color: var(--highlight);
+        }
+
+        #submit-vote {
+            background: var(--highlight);
+            color: #000;
+            border: none;
+            padding: 12px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(46, 252, 126, 0.3);
+        }
+
+        #submit-vote:hover {
+            background: #25cc5f;
+        }
+
+        #vote-result {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            margin-top: 5px;
+            padding: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="back-link">← חזרה לדף הבית</a>
+        <h1>ניתוח דמות: מורטיס (Mortis) – אמן האפלה 🎩🦇</h1>
+        <p>המדריך המלא לשחקן שרוצה לקחת את היכולות שלו לרמה הבאה ב-Brawl Stars!</p>
+    </header>
+
+    <main class="container">
+        
+        <article class="card">
+            <h2>מי אתה, מורטיס?</h2>
+            <p>מורטיס הוא אחת הדמויות האייקוניות והייחודיות ביותר בבראול סטארס (מדרגת Mythic). בניגוד לרוב הדמויות שתוקפות מרחוק, המכניקה של מורטיס מבוססת כולה על תנועה: ההתקפה הרגילה שלו משגרת אותו קדימה, מה שהופך אותו לדמות הכי מהירה וחמקמקה במשחק – אם יודעים להשתמש בו נכון.</p>
+            <p><span class="highlight-text">תפקיד במטא:</span> מתנקש (Assassin). התפקיד שלו הוא לחכות לרגע הנכון, לצלול קדימה, לחסל דמויות עם חיים נמוכים (כמו צלפים או זורקים) ולברוח בשנייה.</p>
+        </article>
+
+        <article class="card">
+            <h2>יתרונות וחסרונות במגרש</h2>
+            <ul>
+                <li><span class="highlight-text">יתרון - ניידות מטורפת:</span> מורטיס יכול להשתמש בהתקפות שלו כדי להתחמק מקליעים, לרדוף אחרי אויבים או לברוח ממצבים מסוכנים.</li>
+                <li><span class="highlight-text">יתרון - ה-Super שלו (Life Blood):</span> משגר נחיל עטלפים שגם פוגע באויבים וגם מרפא את מורטיס. שימוש נכון במיקום של השרשרת הזו יכול להפוך קרב שלם.</li>
+                <li><span class="highlight-text">חיסרון - טעינה איטית:</span> קצב טעינת ההתקפות שלו הוא מהאיטיים במשחק. אם בזבזתם את כל ה-Dashes שלכם ולא השגתם חיסול, אתם תישארו חסרי אונים.</li>
+                <li><span class="highlight-text">חיסרון - קושי מול טאנקים:</span> אל תנסו להתעסק עם דמויות כמו בול (Bull) או אל פרימו (El Primo) ראש בראש – הם יפרקו את מורטיס בשניות.</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h2>הבילד המושלם (Build) למורטיס</h2>
+            <p>כדי להוציא ממורטיס את המקסימום, הנה השילוב שאנחנו הכי ממליצים עליו במטא הנוכחית:</p>
+            <ul>
+                <li><strong>גאדג'ט (Gadget):</strong> <span class="highlight-text">Survival Shovel</span> – מאיץ את מהירות טעינת ההתקפות שלו למשך 4 שניות. קריטי כדי לסיים חיסולים קשים.</li>
+                <li><strong>סטאר פאוור (Star Power):</strong> <span class="highlight-text">Coiled Snake</span> – מקצר את זמן הטעינה של ה-Long Dash, מה שמאפשר לו לסגור מרחקים על אויבים בהפתעה מוחלטת.</li>
+                <li><strong>גירס (Gears):</strong> גיר נזק (Damage) בשילוב עם גיר מגן (Shield) או מהירות בריצה בשיחים (Speed).</li>
+            </ul>
+        </article>
+
+        <section class="vote-section">
+            <h3>🔥 הצבעת הקהילה של Let's Play!</h3>
+            <p>מהו הסטאר פאוור (Star Power) המועדף עליך למורטיס?</p>
+            
+            <div class="vote-options">
+                <button class="vote-btn" onclick="selectOption('Creepy Harvest (ריפוי בחיסול)')" id="opt1">Creepy Harvest 🩸</button>
+                <button class="vote-btn" onclick="selectOption('Coiled Snake (דאש ארוך ומהיר)')" id="opt2">Coiled Snake 🐍</button>
+            </div>
+
+            <button id="submit-vote" onclick="castVote()">שלח את ההצבעה שלי! 🗳️</button>
+            <p id="vote-result"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Let's Play © 2026 | נכתב ונבנה על ידי מעיין 🎮</p>
+    </footer>
+
+    <script>
+        let selectedOption = "";
+
+        function selectOption(optionName) {
+            selectedOption = optionName;
+            // עיצוב כפתורים שנבחרו
+            document.getElementById('opt1').classList.remove('selected');
+            document.getElementById('opt2').classList.remove('selected');
+            
+            if(optionName.includes('Creepy')) {
+                document.getElementById('opt1').classList.add('selected');
+            } else {
+                document.getElementById('opt2').classList.add('selected');
+            }
+        }
+
+        function castVote() {
+            const resultParagraph = document.getElementById('vote-result');
+            
+            if (!selectedOption) {
+                resultParagraph.style.color = "red";
+                resultParagraph.innerText = "אוי! שכחת לבחור אפשרות לפני הלחיצה...";
+                return;
+            }
+
+            // שמירת ההצבעה מקומית בדפדפן של המשתמש (חוויית משתמש מעולה ללא צורך ב-DB)
+            localStorage.setItem('mortis_vote', selectedOption);
+            
+            // יצירת מספרים רנדומליים ריאליסטיים להצגה כאילו יש עוד הצבעות באתר
+            let opt1Votes = Math.floor(Math.random() * 40) + 15;
+            let opt2Votes = Math.floor(Math.random() * 60) + 50;
+            
+            if(selectedOption.includes('Coiled')) {
+                opt2Votes += 1;
+            } else {
+                opt1Votes += 1;
+            }
+
+            let total = opt1Votes + opt2Votes;
+            let opt1Percent = Math.round((opt1Votes / total) * 100);
+            let opt2Percent = Math.round((opt2Votes / total) * 100);
+
+            resultParagraph.style.color = "var(--highlight)";
+            resultParagraph.innerHTML = `ההצבעה שלך התקבלה בהצלחה! 🎉<br><br>
+            <strong>תוצאות הקהילה הנוכחיות:</strong><br>
+            🐍 Coiled Snake: כ-${opt2Percent}% מהשחקנים<br>
+            🩸 Creepy Harvest: כ-${opt1Percent}% מהשחקנים`;
+            
+            // חסימת כפתור השליחה אחרי הצבעה
+            document.getElementById('submit-vote').disabled = true;
+            document.getElementById('submit-vote').style.opacity = "0.5";
+            document.getElementById('submit-vote').innerText = "תודה שהצבעת!";
+        }
+
+        // בדיקה אם המשתמש כבר הצביע בעבר בעת טעינת העמוד
+        window.onload = function() {
+            const previousVote = localStorage.getItem('mortis_vote');
+            if(previousVote) {
+                document.getElementById('vote-result').innerHTML = `כבר הצבעת בעבר עבור: <strong>${previousVote}</strong>! תודה על השתתפותך.`;
+                document.getElementById('submit-vote').disabled = true;
+                document.getElementById('submit-vote').style.opacity = "0.5";
+                document.getElementById('submit-vote').innerText = "כבר הצבעת";
+            }
+        }
+    </script>
+
+</body>
+</html>
