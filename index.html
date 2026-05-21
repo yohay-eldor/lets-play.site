@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אתר העדכונים והדיווחים על עולם הגיימינג בישראל</title>
-
     
-<link rel="icon" type="image/png" href="/favicon-maayan2.png" />
-    
-</head>
+    <title>Let's Play | אתר העדכונים והדיווחים על עולם הגיימינג בישראל</title>
 
-<style>
+    <meta name="description" content="ברוכים הבאים לאתר Let's Play של מעיין! עדכונים חמים על עולם הגיימינג, טיפים, ביקורות ומדריכים למשחקים הכי אהובים כמו בראול סטארס, פורטנייט, רובלוקס ומיינקראפט.">
+    
+    <link rel="canonical" href="https://lets-play.site/" />
+    
+    <link rel="icon" type="image/png" href="/favicon-maayan2.png" />
+
+    <style>
         /* הגדרת משתני צבעים */
         :root {
             --bg-gradient: linear-gradient(135deg, brown, yellow, #c8d0d9);
@@ -60,56 +62,52 @@
             font-weight: bold;
         }
     </style>
+</head>
 <body>
 
     <header>
         <h1>ברוכים הבאים לאתר שלי! 🎮</h1>
         <p>היי! אני מעיין! אני מאד אוהב גיימינג, וגם לומד קצת את עולם התכנות, אז באתר הזה אני משלב את שניהם :) מקווה שתהנו!</p>
-     </header>
+    </header>
 
+    <button id="theme-btn" onclick="toggleTheme()">החלף מצב תצוגה</button>
 
-<button id="theme-btn" onclick="toggleTheme()">החלף מצב תצוגה</button>
+    <main class="container">
+        <section class="card">
+            <h2>קצת עליי</h2>
+            <p>אני מאוד אוהב גיימינג, לפתור חידות ולגלות איך דברים עובדים. אני מתחיל את המסע שלי בעולם התכנות ומקווה לבנות יום אחד משחק משלי!</p>
+        </section>
 
-    <section class="container">
-           <section class="card">
-        <h2>קצת עליי</h2>
-        <p>אני מאוד אוהב גיימינג, לפתור חידות ולגלות איך דברים עובדים. אני מתחיל את המסע שלי בעולם התכנות ומקווה לבנות יום אחד משחק משלי!</p>
-    </section>
+        <section class="card">
+            <h2>המשחקים שאני הכי אוהב</h2>
+            <ul>
+                <li>Minecraft - כי אפשר לבנות בה הכל!</li>
+                <li>Roblox - בגלל שיש שם מיליון משחקים שונים.</li>
+                <li>Fortnite - בגלל האתגר והכיף WITH חברים.</li>
+                <li>וכמובן כמובן - Brawl Stars :)</li>
+            </ul>
+        </section>
 
-    <section class="card">
-        <h2>המשחקים שאני הכי אוהב</h2>
-        <ul>
-            <li>Minecraft - כי אפשר לבנות בה הכל!</li>
-            <li>Roblox - בגלל שיש שם מיליון משחקים שונים.</li>
-            <li>Fortnite - בגלל האתגר והכיף עם חברים.</li>
-            <li>וכמובן כמובן - Brawl Stars :)</li>
-        </ul>
-    </section>
+        <section class="card">
+            <h2>מה אני רוצה לעשות באתר הזה?</h2>
+            <p>בעתיד אני מתכנן להוסיף לכאן:</p>
+            <ul>
+                <li>ביקורות על המשחקים שאני משחק.</li>
+                <li>טיפים וטריקים (Cheats) למשחקים שאני טוב בהם.</li>
+                <li>דף שבו אני מציג את הפרויקטים הראשונים שאכתוב בקוד!</li>
+            </ul>
+        </section>
+    </main>
 
-    <section class="card">
-        <h2>מה אני רוצה לעשות באתר הזה?</h2>
-        <p>בעתיד אני מתכנן להוסיף לכאן:</p>
-        <ul>
-            <li>ביקורות על המשחקים שאני משחק.</li>
-            <li>טיפים וטריקים (Cheats) למשחקים שאני טוב בהם.</li>
-            <li>דף שבו אני מציג את הפרויקטים הראשונים שאכתוב בקוד!</li>
-        </ul>
-    </section>
-
-    </section>
-
- 
     <footer>
         <p>תודה שביקרתם באתר שלי! 👾</p>
     </footer>
-    
     
     <script>
         function toggleTheme() {
             document.body.classList.toggle('light-mode');
         }
     </script>
-    
 
 </body>
 </html>
