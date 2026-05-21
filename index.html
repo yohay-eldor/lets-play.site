@@ -11,81 +11,64 @@
 </head>
 
 <style>
-    body {
-    background-color: #0f0f1a;
-    color: #e0e0e0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-}
+        /* הגדרת משתני צבעים */
+        :root {
+            --bg-gradient: linear-gradient(135deg, brown, yellow, #c8d0d9);
+            --text-color: black;
+            --card-bg: rgba(200, 80, 3, 0.9);
+            --accent: #00d4ff;
+        }
 
-header {
-    margin-bottom: 40px;
-    color: #00d4ff;
+        h1 {
+            color: var(--text-color); /* יתעדכן אוטומטית לפי המצב */
+            transition: 0.3s; /* כדי שהשינוי יהיה חלק */
+        }
 
-}
+        /* מצב לייט (נוסף כשהקלאס light-mode פעיל על ה-body) */
+        body.light-mode {
+            --bg-gradient: linear-gradient(135deg, brown, #f5f5f5, grey);
+            --text-color: #333;
+            --card-bg: linear-gradient(160deg, green, lightblue);
+            --accent: #d63384;
+        }
 
-.card {
-    background: linear-gradient(170deg, black, blue, #443322, blue, #123123, blue, #112233, blue);
-    border: 2px solid #00d4ff;
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 600px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
-}
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            font-family: sans-serif;
+            transition: 0.3s; /* אפקט מעבר חלק */
+            padding: 20px;
+            text-align: center;
+        }
 
-.container {
-    background: linear-gradient(135deg, red, green, yellow, blue, black);
-    border: solid 10px blue;
-    border-radius: 20px;
-        padding: 30px;
-    margin: 10px;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 600px;
-    
-}
+        .card {
+            background: var(--card-bg);
+            border: 2px solid var(--accent);
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 600px;
+            border-radius: 15px;
+        }
 
-
-h2 {
-    color: #ff007f; /* Pink accent */
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-footer {
-    margin-top: 50px;
-    font-size: 0.9em;
-    color: #888;
-}
-
-/* כאן הקסם: אם המסך רחב יותר מ-768 פיקסלים (מחשב), הוא לא יעבור את ה-600 פיקסלים */
-@media (min-width: 768px) {
-    .container {
-        max-width: 600px;
-    }
-}
-
-</style>
-
+        /* עיצוב הכפתור */
+        #theme-btn {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: var(--accent);
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
 <body>
 
     <header>
         <h1>ברוכים הבאים לאתר שלי! 🎮</h1>
         <p>היי! אני מעיין! אני מאד אוהב גיימינג, וגם לומד קצת את עולם התכנות, אז באתר הזה אני משלב את שניהם :) מקווה שתהנו!</p>
      </header>
+
+
+<button id="theme-btn" onclick="toggleTheme()">החלף מצב תצוגה</button>
 
     <section class="container">
            <section class="card">
@@ -119,6 +102,14 @@ footer {
     <footer>
         <p>תודה שביקרתם באתר שלי! 👾</p>
     </footer>
+    
+    
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
+    
 
 </body>
 </html>
