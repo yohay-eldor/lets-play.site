@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הדמויות הכי חזקות בבראול סטארס: טיר ליסט מעודכן | Let's Play</title>
+    <!-- קנוניקל ונתוני מטא עבור גוגל -->
+<link rel="canonical" href="https://letsplay.site/brawl-stars/brawlers/mortis/tier-list" />
+<meta name="description" content="הכירו את הדמויות הכי חזקות בבראול סטארס! טיר ליסט מעודכן לשנת 2026 עם טיפים מקצועיים לבחירת בראולרים (Brawlers) וניצחון במצב Ranked התחרותי." />
+<meta name="keywords" content="בראול סטארס, בראולר, טיר ליסט, דמויות הכי חזקות, מטא, מדריך, משחקים, גיימינג, רנקינג, Brawl Stars, Tier List, Ranked" />
+    
+    <style>
+        /* עיצוב כללי בסגנון גיימינג */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121214;
+            color: #e1e1e6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #1a1a1e;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* כותרות */
+        h1 {
+            color: #ffcc00;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .meta-info {
+            text-align: center;
+            color: #a8a8b3;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #29292e;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #00e676;
+            font-size: 1.8rem;
+            margin-top: 25px;
+            border-right: 4px solid #00e676;
+            padding-right: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #c4c4cc;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* עיצוב תיבת הטיפ החשוב */
+        .highlight-box {
+            background-color: #29292e;
+            border-right: 6px solid #ffcc00;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 25px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* רשימות מעוצבות */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #202024;
+            margin: 8px 0;
+            padding: 12px 15px;
+            border-radius: 6px;
+            border-right: 3px solid #ff3d00;
+            font-size: 1.05rem;
+        }
+
+        li strong {
+            color: #ff3d00;
+        }
+
+        /* פוטר האתר */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #29292e;
+            color: #737380;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <article>
+            <h1>הדמויות הכי חזקות בבראול סטארס: טיר ליסט מעודכן</h1>
+            <div class="meta-info">פורסם באתר Let's Play | מדריכי גיימינג ואסטרטגיה</div>
+
+            <p>אם אתם משחקים בבראול סטארס (Brawl Stars), אתם בטח כבר יודעים שהמטא (Meta) של המשחק משתנה ללא הפסקה. דמויות שהיו חלשות בעבר הופכות פתאום למפלצות זירתיות בזכות באפים (Buffs) או הוספת היפרצ'ארג' (Hypercharge) חדש, בעוד דמויות אהובות אחרות סופגות נרפים (Nerfs) ונעלמות לחלוטין מהטופ התחרותי. כדי לעזור לכם לטפס בגביעים ולנצח בכל משחק במצב ה-Ranked, אספנו עבורכם את הבראולרים הכי חזקים שאתם חייבים לשחק איתם כרגע.</p>
+
+            <h2>דרגת S-Tier: השליטים הבלתי מעורערים של הזירה</h2>
+            <p>הדמויות שנמצאות בדרגה זו הן הבחירות הבטוחות ביותר כמעט בכל מפה ובכל מצב משחק. הן מציעות שילוב של נזק גבוה, שרידות ויכולת לשנות את פני המערכה ברגע אחד.</p>
+            
+            <ul>
+                <li><strong>מורטיס (Mortis):</strong> למרות שהוא תמיד היה דמות שדורשת רמת מיומנות (Skill) גבוהה במיוחד, השילובים הנוכחיים והיכולת שלו להתחמק ממתקפות הופכים אותו לאיום קטלני במצבים כמו Brawl Ball ו-Bounty.</li>
+                <li><strong>קולט (Colt):</strong> עם יכולת פתיחת מפות מטורפת ונזק ממרחק שיכול להמיס כספות במצב Heist, שחקן קולט שיודע לכוון טוב יכול לבטל לחלוטין את תוכנית המשחק של היריב.</li>
+                <li><strong>דמיאן (Damian):</strong> כאחד הבראולרים החדשים והדומיננטיים ביותר, הדמות הזו מביאה איתה מכניקה ייחודית שמשבשת את קווי ההגנה של האויב ומכריחה את היריבים לשחק בצורה הגנתית ופחדנית.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p>💡 טיפ מקצוענים: אל תבחרו דמות רק בגלל שהיא בדרגת S-Tier! אם אתם לא שולטים במכניקה שלה, עדיף לבחור דמות מדרגה אליה אתם רגילים ומרגישים איתה בנוח.</p>
+            </div>
+
+            <h2>איך לבחור את הבראולר הנכון במצב Ranked?</h2>
+            <p>הטעות הגדולה ביותר של שחקנים רבים היא בחירה עיוורת בדמויות האהובות עליהם מבלי להסתכל על המפה או על הבחירות של היריב. במצב התחרותי, שלב הפיקים והבאנים (Draft) הוא חצי מהניצחון. אם אתם רואים שהיריב בחר דמויות עם טווח קצר (Tanks), זה הזמן שלכם לקחת קאונטר (Counter) כמו קולט או דמויות שיכולות לשמור על מרחק ולבצע נזק מתמשך.</p>
+            
+            <p>בנוסף, תמיד שימו לב למצבי המשחק המשתנים. דמות שטובה ב-Heist לא בהכרח תעשה את העבודה ב-Knockout. המפתח האמיתי לעלייה מהירה בדירוג הוא גמישות והבנה עמוקה של היתרונות והחסרונות של כל דמות בטיר ליסט הנוכחי.</p>
+
+            <footer>
+                © 2026 Let's Play Dot Site. כל הזכויות שמורות לקוראי הגיימינג בישראל.
+            </footer>
+        </article>
+    </div>
+
+</body>
+</html>
