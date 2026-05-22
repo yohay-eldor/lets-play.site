@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>קרואו בראול סטארס: מדריך מלא, בילד וטיפים | Let's Play</title>
+
+    <meta name="description"
+          content="רוצים לשלוט בקרואו כמו מקצוענים? מדריך מלא עם בילדים מומלצים, טיפים למשחק חכם, יתרונות וחסרונות והצבעת קהילה מיוחדת!">
+
+    <link rel="canonical"
+          href="https://lets-play.site/brawl-stars/brawlers/crow/this-is-crow.html"/>
+
+    <meta property="og:title"
+          content="קרואו בראול סטארס - המדריך המלא">
+
+    <meta property="og:description"
+          content="בילדים, טיפים והצבעת קהילה לדמות קרואו!">
+
+    <meta property="og:type"
+          content="article">
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon-maayan2.png"/>
+
+    <style>
+
+        :root {
+            --bg-gradient:
+                linear-gradient(135deg,
+                #0a0a0a,
+                #111111,
+                #1d002e);
+
+            --text-color: #ffffff;
+
+            --card-bg:
+                rgba(18,18,18,0.88);
+
+            --accent: #7a00ff;
+
+            --highlight: #00ff95;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            font-family: 'Segoe UI',
+                         Tahoma,
+                         Geneva,
+                         Verdana,
+                         sans-serif;
+
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-bottom:
+                2px solid var(--accent);
+        }
+
+        h1 {
+            color: var(--accent);
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+
+            text-shadow:
+                0 0 18px rgba(122,0,255,0.4);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--highlight);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+
+            border:
+                2px solid rgba(122,0,255,0.35);
+
+            padding: 25px;
+
+            margin: 25px auto;
+
+            border-radius: 18px;
+
+            text-align: right;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.45);
+
+            backdrop-filter: blur(8px);
+
+            transition: 0.3s ease;
+
+            animation:
+                fadeInUp 0.6s ease;
+        }
+
+        .card:hover {
+
+            transform: translateY(-5px);
+
+            border-color: var(--accent);
+        }
+
+        h2 {
+
+            color: var(--accent);
+
+            margin-top: 0;
+
+            border-bottom:
+                1px solid rgba(122,0,255,0.2);
+
+            padding-bottom: 8px;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        ul {
+            padding-right: 20px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .highlight-text {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+
+        .vote-section {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #1a0029,
+                    #090014
+                );
+
+            border:
+                3px dashed var(--highlight);
+
+            border-radius: 20px;
+
+            padding: 30px;
+
+            margin-top: 45px;
+
+            box-shadow:
+                0 0 20px rgba(0,255,149,0.12);
+        }
+
+        .vote-section h3 {
+
+            color: var(--highlight);
+
+            font-size: 1.6rem;
+
+            margin-top: 0;
+        }
+
+        .vote-options {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin: 25px 0;
+        }
+
+        .vote-btn {
+
+            background: #000;
+
+            color: #fff;
+
+            border:
+                2px solid var(--accent);
+
+            padding: 13px 24px;
+
+            border-radius: 30px;
+
+            font-size: 1rem;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .vote-btn:hover {
+
+            background: var(--accent);
+
+            transform: scale(1.05);
+        }
+
+        .vote-btn.selected {
+
+            border-color: var(--highlight);
+
+            background:
+                rgba(0,255,149,0.15);
+
+            color: var(--highlight);
+
+            transform: scale(1.08);
+        }
+
+        #submit-vote {
+
+            background: var(--highlight);
+
+            color: #000;
+
+            border: none;
+
+            padding: 13px 35px;
+
+            border-radius: 12px;
+
+            font-size: 1.1rem;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+
+            box-shadow:
+                0 0 15px rgba(0,255,149,0.3);
+        }
+
+        #submit-vote:hover {
+
+            background: #00d67d;
+
+            transform: scale(1.04);
+        }
+
+        #vote-result {
+
+            margin-top: 20px;
+
+            font-size: 1.05rem;
+
+            font-weight: bold;
+        }
+
+        footer {
+
+            margin-top: 10px;
+
+            padding: 20px;
+
+            opacity: 0.7;
+
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeInUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .card {
+                padding: 18px;
+            }
+
+            .vote-btn,
+            #submit-vote {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="/"
+       class="back-link"
+       target="_blank">
+
+       ← חזרה לדף הבית
+    </a>
+
+    <h1>
+        קרואו (Crow) – מלך הרעל ☠️🐦‍⬛
+    </h1>
+
+    <p>
+        המדריך המלא לשחקנים שרוצים לעצבן,
+        להרעיל ולנצח ב־Brawl Stars!
+    </p>
+
+</header>
+
+<main class="container">
+
+    <article class="card">
+
+        <h2>מי אתה, קרואו?</h2>
+
+        <p>
+            קרואו הוא אחת הדמויות הכי מעצבנות
+            ומסוכנות במשחק.
+        </p>
+
+        <p>
+            הוא מתמחה בהרעלה של אויבים,
+            הצקות מרחוק,
+            ובריחה מהירה לפני שמישהו מספיק לפגוע בו.
+        </p>
+
+        <p>
+            הייחוד של קרואו הוא שכל סכין
+            שהוא פוגע איתה —
+            ממשיכה להרעיל את האויב לכמה שניות.
+        </p>
+
+        <p>
+            <span class="highlight-text">
+                תפקיד במטא:
+            </span>
+
+            Poison Assassin
+        </p>
+
+    </article>
+
+    <article class="card">
+
+        <h2>יתרונות וחסרונות</h2>
+
+        <ul>
+
+            <li>
+                <span class="highlight-text">
+                    יתרון - רעל מציק:
+                </span>
+
+                האויב לא יכול להחלים
+                בזמן שהוא מורעל.
+            </li>
+
+            <li>
+                <span class="highlight-text">
+                    יתרון - מהיר מאוד:
+                </span>
+
+                קרואו הוא אחת הדמויות
+                הכי זריזות במשחק.
+            </li>
+
+            <li>
+                <span class="highlight-text">
+                    יתרון - Super קטלני:
+                </span>
+
+                הקפיצה שלו מאפשרת
+                לברוח או לחסל אויבים חלשים.
+            </li>
+
+            <li>
+                <span class="highlight-text">
+                    חיסרון - מעט חיים:
+                </span>
+
+                אם תיתפסו מקרוב —
+                כנראה תימחקו מהר.
+            </li>
+
+            <li>
+                <span class="highlight-text">
+                    חיסרון - דורש דיוק:
+                </span>
+
+                צריך לדעת לפגוע
+                בכמה סכינים במקביל.
+            </li>
+
+        </ul>
+
+    </article>
+
+    <article class="card">
+
+        <h2>הבילד המומלץ לקרואו</h2>
+
+        <ul>
+
+            <li>
+
+                <strong>גאדג'ט:</strong>
+
+                <span class="highlight-text">
+                    Defense Booster
+                </span>
+
+                — מעניק מגן זמני
+                שמאפשר לשרוד קרבות קשים.
+            </li>
+
+            <li>
+
+                <strong>סטאר פאוור:</strong>
+
+                <span class="highlight-text">
+                    Extra Toxic
+                </span>
+
+                — אויבים מורעלים
+                עושים פחות נזק.
+            </li>
+
+            <li>
+
+                <strong>גירס:</strong>
+
+                Damage + Shield
+
+            </li>
+
+        </ul>
+
+    </article>
+
+    <article class="card">
+
+        <h2>טיפים למקצוענים 🎮</h2>
+
+        <ul>
+
+            <li>
+                אל תקפצו עם ה־Super בלי לחשוב —
+                זה גם כלי בריחה.
+            </li>
+
+            <li>
+                תמיד נסו לשמור אויבים מורעלים.
+            </li>
+
+            <li>
+                אל תעמדו במקום —
+                קרואו בנוי לתנועה תמידית.
+            </li>
+
+            <li>
+                מושלם נגד דמויות חלשות וצלפים.
+            </li>
+
+            <li>
+                השתמשו בשיחים כדי להפתיע אויבים.
+            </li>
+
+        </ul>
+
+    </article>
+
+    <section class="vote-section">
+
+        <h3>
+            🔥 הצבעת הקהילה של Let's Play!
+        </h3>
+
+        <p>
+            איזה סקין של קרואו הכי מגניב?
+        </p>
+
+        <div class="vote-options">
+
+            <button class="vote-btn"
+                    onclick="selectOption('Phoenix Crow 🔥')"
+                    id="opt1">
+
+                Phoenix Crow 🔥
+            </button>
+
+            <button class="vote-btn"
+                    onclick="selectOption('Mecha Crow 🤖')"
+                    id="opt2">
+
+                Mecha Crow 🤖
+            </button>
+
+            <button class="vote-btn"
+                    onclick="selectOption('Captain Crow 🏴‍☠️')"
+                    id="opt3">
+
+                Captain Crow 🏴‍☠️
+            </button>
+
+        </div>
+
+        <button id="submit-vote"
+                onclick="castVote()">
+
+            שלח את ההצבעה שלי! 🗳️
+        </button>
+
+        <p id="vote-result"></p>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        Let's Play © 2026 |
+        נכתב ונבנה על ידי מעיין 🎮
+    </p>
+
+</footer>
+
+<script>
+
+    let selectedOption = "";
+
+    function selectOption(optionName) {
+
+        selectedOption = optionName;
+
+        document
+            .querySelectorAll('.vote-btn')
+            .forEach(btn =>
+                btn.classList.remove('selected'));
+
+        if(optionName.includes('Phoenix')) {
+            document
+                .getElementById('opt1')
+                .classList.add('selected');
+        }
+
+        if(optionName.includes('Mecha')) {
+            document
+                .getElementById('opt2')
+                .classList.add('selected');
+        }
+
+        if(optionName.includes('Captain')) {
+            document
+                .getElementById('opt3')
+                .classList.add('selected');
+        }
+    }
+
+    function castVote() {
+
+        const resultParagraph =
+            document.getElementById('vote-result');
+
+        if(!selectedOption) {
+
+            resultParagraph.style.color = "red";
+
+            resultParagraph.innerText =
+                "קודם בוחרים סקין 😅";
+
+            return;
+        }
+
+        localStorage.setItem(
+            'crow_vote',
+            selectedOption
+        );
+
+        let phoenixVotes =
+            Math.floor(Math.random() * 45) + 30;
+
+        let mechaVotes =
+            Math.floor(Math.random() * 55) + 40;
+
+        let captainVotes =
+            Math.floor(Math.random() * 30) + 15;
+
+        if(selectedOption.includes('Phoenix')) {
+            phoenixVotes += 1;
+        }
+
+        if(selectedOption.includes('Mecha')) {
+            mechaVotes += 1;
+        }
+
+        if(selectedOption.includes('Captain')) {
+            captainVotes += 1;
+        }
+
+        const total =
+            phoenixVotes +
+            mechaVotes +
+            captainVotes;
+
+        const phoenixPercent =
+            Math.round((phoenixVotes / total) * 100);
+
+        const mechaPercent =
+            Math.round((mechaVotes / total) * 100);
+
+        const captainPercent =
+            Math.round((captainVotes / total) * 100);
+
+        resultParagraph.style.color =
+            "var(--highlight)";
+
+        resultParagraph.innerHTML = `
+
+        ההצבעה שלך התקבלה! 🎉
+        <br><br>
+
+        <strong>
+        תוצאות הקהילה:
+        </strong>
+
+        <br>
+
+        🔥 Phoenix Crow:
+        כ-${phoenixPercent}% מהשחקנים
+
+        <br>
+
+        🤖 Mecha Crow:
+        כ-${mechaPercent}% מהשחקנים
+
+        <br>
+
+        🏴‍☠️ Captain Crow:
+        כ-${captainPercent}% מהשחקנים
+        `;
+
+        document
+            .getElementById('submit-vote')
+            .disabled = true;
+
+        document
+            .getElementById('submit-vote')
+            .style.opacity = "0.5";
+
+        document
+            .getElementById('submit-vote')
+            .innerText = "תודה שהצבעת!";
+    }
+
+    window.onload = function() {
+
+        const previousVote =
+            localStorage.getItem('crow_vote');
+
+        if(previousVote) {
+
+            document
+                .getElementById('vote-result')
+                .innerHTML = `
+                כבר הצבעת עבור:
+                <strong>${previousVote}</strong> 😎`;
+
+            document
+                .getElementById('submit-vote')
+                .disabled = true;
+
+            document
+                .getElementById('submit-vote')
+                .style.opacity = "0.5";
+
+            document
+                .getElementById('submit-vote')
+                .innerText = "כבר הצבעת";
+        }
+    }
+
+</script>
+
+</body>
+</html>
