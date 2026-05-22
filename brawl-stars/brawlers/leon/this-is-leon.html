@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>ליאון בראול סטארס: מדריך מלא, בילד מנצח וטיפים | Let's Play</title>
+
+    <meta name="description" content="רוצים לשלוט בליאון כמו מקצוענים? היכנסו למדריך המלא עם בילדים מומלצים, טיפים לנינג'ה אמיתי, יתרונות וחסרונות והצבעת קהילה מיוחדת!">
+
+    <link rel="canonical" href="https://lets-play.site/brawl-stars/brawlers/leon/this-is-leon.html"/>
+
+    <meta property="og:title" content="ליאון בראול סטארס - המדריך המלא">
+    <meta property="og:description" content="הבילד הכי טוב לליאון, טיפים למקצוענים והצבעת קהילה!">
+    <meta property="og:type" content="article">
+
+    <link rel="icon" type="image/png" href="/favicon-maayan2.png"/>
+
+    <style>
+
+        :root {
+            --bg-gradient: linear-gradient(135deg, #001f1f, #000000, #003d3d);
+            --text-color: #ffffff;
+            --card-bg: rgba(0, 30, 30, 0.88);
+            --accent: #00ffae;
+            --highlight: #7dff4d;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        h1 {
+            color: var(--accent);
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(0,255,174,0.5);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--highlight);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 2px solid rgba(0,255,174,0.35);
+            padding: 25px;
+            margin: 25px auto;
+            border-radius: 18px;
+            text-align: right;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.45);
+            backdrop-filter: blur(8px);
+            transition: 0.3s ease;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-top: 0;
+            border-bottom: 1px solid rgba(0,255,174,0.2);
+            padding-bottom: 8px;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        ul {
+            padding-right: 20px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .highlight-text {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+
+        .vote-section {
+            background: linear-gradient(145deg, #002929, #001616);
+            border: 3px dashed var(--highlight);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 45px;
+            box-shadow: 0 0 20px rgba(125,255,77,0.15);
+        }
+
+        .vote-section h3 {
+            color: var(--highlight);
+            font-size: 1.6rem;
+            margin-top: 0;
+        }
+
+        .vote-options {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .vote-btn {
+            background: #000;
+            color: #fff;
+            border: 2px solid var(--accent);
+            padding: 13px 24px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .vote-btn:hover {
+            background: var(--accent);
+            color: #000;
+            transform: scale(1.05);
+        }
+
+        .vote-btn.selected {
+            border-color: var(--highlight);
+            background: rgba(125,255,77,0.2);
+            color: var(--highlight);
+            transform: scale(1.08);
+        }
+
+        #submit-vote {
+            background: var(--highlight);
+            color: #000;
+            border: none;
+            padding: 13px 35px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+            box-shadow: 0 0 15px rgba(125,255,77,0.3);
+        }
+
+        #submit-vote:hover {
+            background: #5eff2d;
+            transform: scale(1.04);
+        }
+
+        #vote-result {
+            margin-top: 20px;
+            font-size: 1.05rem;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 10px;
+            padding: 20px;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .card {
+                padding: 18px;
+            }
+
+            .vote-btn {
+                width: 100%;
+            }
+
+            #submit-vote {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/" class="back-link" target="_blank">← חזרה לדף הבית</a>
+
+    <h1>ליאון (Leon) – אמן ההיעלמות 🦎💨</h1>
+
+    <p>
+        המדריך המלא לשחקנים שרוצים להפוך לנינג'ה אמיתי ב־Brawl Stars!
+    </p>
+</header>
+
+<main class="container">
+
+    <article class="card">
+        <h2>מי אתה, ליאון?</h2>
+
+        <p>
+            ליאון הוא אחת הדמויות הכי מגניבות ואהובות ב־Brawl Stars.
+            הוא מתנקש מהיר ומסוכן שמתמחה בהפתעות, חיסולים מהירים ובריחות מושלמות.
+        </p>
+
+        <p>
+            היכולת הכי מפחידה שלו היא ה־Super:
+            <span class="highlight-text">Smoke Bomb</span>
+            — ליאון הופך לבלתי נראה לכמה שניות ויכול להתגנב מאחורי אויבים בלי שישימו לב.
+        </p>
+
+        <p>
+            <span class="highlight-text">תפקיד במטא:</span>
+            Assassin / Sneaky Killer
+        </p>
+    </article>
+
+    <article class="card">
+        <h2>יתרונות וחסרונות</h2>
+
+        <ul>
+            <li>
+                <span class="highlight-text">יתרון - בלתי נראה:</span>
+                היכולת להיעלם מאפשרת לליאון לבצע Ambush קטלני על שחקנים חלשים.
+            </li>
+
+            <li>
+                <span class="highlight-text">יתרון - מהירות גבוהה:</span>
+                ליאון מהיר מאוד ויכול לברוח מקרבות מסוכנים בקלות.
+            </li>
+
+            <li>
+                <span class="highlight-text">יתרון - נזק מטורף מקרוב:</span>
+                כשהוא קרוב לאויב — הוא מוחק חיים בשניות.
+            </li>
+
+            <li>
+                <span class="highlight-text">חיסרון - חלש מרחוק:</span>
+                ככל שהשוריקנים שלו מתרחקים — הם עושים פחות נזק.
+            </li>
+
+            <li>
+                <span class="highlight-text">חיסרון - דורש סבלנות:</span>
+                שחקני ליאון טובים יודעים לחכות לרגע הנכון לפני שהם תוקפים.
+            </li>
+        </ul>
+    </article>
+
+    <article class="card">
+        <h2>הבילד המומלץ לליאון</h2>
+
+        <ul>
+            <li>
+                <strong>גאדג'ט:</strong>
+                <span class="highlight-text">Clone Projector</span>
+                — שולח כפיל מזויף שיכול לבלבל אויבים.
+            </li>
+
+            <li>
+                <strong>סטאר פאוור:</strong>
+                <span class="highlight-text">Invisiheal</span>
+                — מרפא את ליאון בזמן שהוא בלתי נראה.
+            </li>
+
+            <li>
+                <strong>גירס:</strong>
+                Damage + Speed
+            </li>
+        </ul>
+    </article>
+
+    <article class="card">
+        <h2>טיפים למקצוענים 🎮</h2>
+
+        <ul>
+            <li>אל תשתמשו ב־Super ישר — חכו שהאויב יהיה עסוק.</li>
+
+            <li>נסו להתקרב דרך שיחים כדי להישאר מוסתרים.</li>
+
+            <li>אל תילחמו בטאנקים חזקים מקרוב אם אין לכם יתרון.</li>
+
+            <li>ליאון מושלם נגד צלפים ודמויות עם מעט חיים.</li>
+
+            <li>תמיד תשאירו דרך בריחה אחרי חיסול.</li>
+        </ul>
+    </article>
+
+    <section class="vote-section">
+
+        <h3>🔥 הצבעת הקהילה של Let's Play!</h3>
+
+        <p>איזה סקין של ליאון הכי מגניב לדעתך?</p>
+
+        <div class="vote-options">
+
+            <button class="vote-btn"
+                    onclick="selectOption('Werewolf Leon 🐺')"
+                    id="opt1">
+                Werewolf Leon 🐺
+            </button>
+
+            <button class="vote-btn"
+                    onclick="selectOption('Shark Leon 🦈')"
+                    id="opt2">
+                Shark Leon 🦈
+            </button>
+
+            <button class="vote-btn"
+                    onclick="selectOption('Sally Leon 🐤')"
+                    id="opt3">
+                Sally Leon 🐤
+            </button>
+
+        </div>
+
+        <button id="submit-vote" onclick="castVote()">
+            שלח את ההצבעה שלי! 🗳️
+        </button>
+
+        <p id="vote-result"></p>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Let's Play © 2026 | נכתב ונבנה על ידי מעיין 🎮</p>
+</footer>
+
+<script>
+
+    let selectedOption = "";
+
+    function selectOption(optionName) {
+
+        selectedOption = optionName;
+
+        document.querySelectorAll('.vote-btn')
+            .forEach(btn => btn.classList.remove('selected'));
+
+        if(optionName.includes('Werewolf')) {
+            document.getElementById('opt1').classList.add('selected');
+        }
+
+        if(optionName.includes('Shark')) {
+            document.getElementById('opt2').classList.add('selected');
+        }
+
+        if(optionName.includes('Sally')) {
+            document.getElementById('opt3').classList.add('selected');
+        }
+    }
+
+    function castVote() {
+
+        const resultParagraph = document.getElementById('vote-result');
+
+        if(!selectedOption) {
+
+            resultParagraph.style.color = "red";
+            resultParagraph.innerText =
+                "חייבים לבחור סקין לפני שמצביעים 😅";
+
+            return;
+        }
+
+        localStorage.setItem('leon_vote', selectedOption);
+
+        let wolfVotes = Math.floor(Math.random() * 40) + 25;
+        let sharkVotes = Math.floor(Math.random() * 50) + 30;
+        let sallyVotes = Math.floor(Math.random() * 35) + 15;
+
+        if(selectedOption.includes('Werewolf')) {
+            wolfVotes += 1;
+        }
+
+        if(selectedOption.includes('Shark')) {
+            sharkVotes += 1;
+        }
+
+        if(selectedOption.includes('Sally')) {
+            sallyVotes += 1;
+        }
+
+        const total = wolfVotes + sharkVotes + sallyVotes;
+
+        const wolfPercent =
+            Math.round((wolfVotes / total) * 100);
+
+        const sharkPercent =
+            Math.round((sharkVotes / total) * 100);
+
+        const sallyPercent =
+            Math.round((sallyVotes / total) * 100);
+
+        resultParagraph.style.color = "var(--highlight)";
+
+        resultParagraph.innerHTML = `
+        ההצבעה שלך התקבלה בהצלחה! 🎉
+        <br><br>
+
+        <strong>תוצאות הקהילה:</strong>
+        <br>
+
+        🐺 Werewolf Leon:
+        כ-${wolfPercent}% מהשחקנים
+        <br>
+
+        🦈 Shark Leon:
+        כ-${sharkPercent}% מהשחקנים
+        <br>
+
+        🐤 Sally Leon:
+        כ-${sallyPercent}% מהשחקנים
+        `;
+
+        document.getElementById('submit-vote').disabled = true;
+
+        document.getElementById('submit-vote').style.opacity = "0.5";
+
+        document.getElementById('submit-vote').innerText =
+            "תודה שהצבעת!";
+    }
+
+    window.onload = function() {
+
+        const previousVote =
+            localStorage.getItem('leon_vote');
+
+        if(previousVote) {
+
+            document.getElementById('vote-result').innerHTML =
+                `כבר הצבעת בעבר עבור:
+                <strong>${previousVote}</strong> 😎`;
+
+            document.getElementById('submit-vote').disabled = true;
+
+            document.getElementById('submit-vote').style.opacity = "0.5";
+
+            document.getElementById('submit-vote').innerText =
+                "כבר הצבעת";
+        }
+    }
+
+</script>
+
+</body>
+</html>
