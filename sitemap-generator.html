@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Sitemap Generator</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: #0f172a;
+            color: #f8fafc;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #111827;
+            border-radius: 14px;
+            padding: 35px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.35);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #38bdf8;
+            font-size: 34px;
+        }
+
+        p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .input-group {
+            margin-top: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background: #1e293b;
+            color: white;
+            font-size: 15px;
+            margin-top: 8px;
+        }
+
+        button {
+            margin-top: 25px;
+            background: #0ea5e9;
+            color: white;
+            border: none;
+            padding: 14px 22px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #0284c7;
+        }
+
+        .results {
+            margin-top: 35px;
+            display: none;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #1e293b;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .number {
+            font-size: 34px;
+            color: #4ade80;
+            font-weight: bold;
+        }
+
+        .label {
+            margin-top: 8px;
+            color: #cbd5e1;
+        }
+
+        textarea {
+            width: 100%;
+            height: 260px;
+            background: #020617;
+            color: #4ade80;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            resize: vertical;
+            font-family: monospace;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #22c55e;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .download-btn:hover {
+            background: #16a34a;
+        }
+
+        .info-box {
+            background: #172554;
+            border: 1px solid #1d4ed8;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+            color: #bfdbfe;
+        }
+
+        code {
+            background: #1e293b;
+            padding: 2px 6px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🗺️ Sitemap Generator</h1>
+
+    <p>
+        Works perfectly with GitHub Pages.<br>
+        Paste your page URLs below (one per line) and generate a valid sitemap.xml instantly.
+    </p>
+
+    <div class="info-box">
+        Example:
+        <br><br>
+        <code>https://lets-play.site/</code><br>
+        <code>https://lets-play.site/brawl-stars/guides/page-name</code>
+    </div>
+
+    <div class="input-group">
+        <label>Website URLs</label>
+
+        <textarea id="urlsInput" placeholder="Paste URLs here..."></textarea>
+    </div>
+
+    <button onclick="generateSitemap()">
+        Generate Sitemap
+    </button>
+
+    <div class="results" id="results">
+
+        <div class="stats">
+
+            <div class="card">
+                <div class="number" id="pagesCount">0</div>
+                <div class="label">Pages Added</div>
+            </div>
+
+            <div class="card">
+                <div class="number" id="ignoredCount">0</div>
+                <div class="label">Ignored URLs</div>
+            </div>
+
+        </div>
+
+        <h2>sitemap.xml</h2>
+
+        <textarea id="xmlOutput"></textarea>
+
+        <a class="download-btn" id="downloadBtn">
+            ⬇ Download sitemap.xml
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+function generateSitemap() {
+
+    const input = document.getElementById("urlsInput").value;
+
+    const lines = input
+        .split("\n")
+        .map(line => line.trim())
+        .filter(line => line.length > 0);
+
+    const ignoredPatterns = [
+        "README",
+        "readme",
+        "CNAME",
+        "sitemap.xml"
+    ];
+
+    let validUrls = [];
+    let ignored = [];
+
+    lines.forEach(url => {
+
+        let shouldIgnore = ignoredPatterns.some(pattern =>
+            url.includes(pattern)
+        );
+
+        if (shouldIgnore) {
+            ignored.push(url);
+            return;
+        }
+
+        validUrls.push(url);
+    });
+
+    const today = new Date().toISOString().split("T")[0];
+
+    let xml =
+`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+`;
+
+    validUrls.forEach(url => {
+
+        xml += `
+    <url>
+        <loc>${escapeXml(url)}</loc>
+        <lastmod>${today}</lastmod>
+    </url>
+`;
+    });
+
+    xml += `
+</urlset>`;
+
+    document.getElementById("pagesCount").innerText = validUrls.length;
+    document.getElementById("ignoredCount").innerText = ignored.length;
+
+    document.getElementById("xmlOutput").value = xml;
+
+    document.getElementById("results").style.display = "block";
+
+    /**
+     * Download file
+     */
+    const blob = new Blob([xml], { type: "application/xml" });
+
+    const url = URL.createObjectURL(blob);
+
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    downloadBtn.href = url;
+    downloadBtn.download = "sitemap.xml";
+}
+
+function escapeXml(unsafe) {
+
+    return unsafe.replace(/[<>&'"]/g, function(c) {
+
+        switch (c) {
+            case '<': return '&lt;';
+            case '>': return '&gt;';
+            case '&': return '&amp;';
+            case '\'': return '&apos;';
+            case '"': return '&quot;';
+        }
+    });
+}
+</script>
+
+</body>
+</html>
