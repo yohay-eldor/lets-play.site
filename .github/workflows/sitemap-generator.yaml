@@ -1,0 +1,37 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Generate Sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://lets-play.site/ # הכתובת המעודכנת לפי הדומיין שלך
+        include-html-extension: false
+        exclude-paths: 404.html # הוסף לכאן קבצי HTML שאתה לא רוצה שיסרקו, מופרדים בפסיק
+
+    - name: Sitemap Generation Report
+      run: |
+        echo "✅ קבצים שנסרקו ונכנסו בהצלחה ל-Sitemap:"
+        grep "<loc>" sitemap.xml | sed 's/<loc>//g; s/<\/loc>//g' || echo "לא נמצאו קבצים"
+        echo "---"
+        echo "ℹ️ קבצי מערכת (CNAME, README) וקבצי קוד (JS/CSS) נדחו אוטומטית כי הם אינם דפי אינטרנט."
+        echo "---"
+        echo "🔗 הקישור הישיר ל-Sitemap שלך:"
+        echo "https://lets-play.site/sitemap.xml"
+
+    - name: Commit and Push Sitemap
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git add sitemap.xml
+        git commit -m "Automated sitemap generation" || exit 0
+        git push
