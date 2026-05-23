@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>איך להתקיף בברול סטארס כמו מקצוען: מדריך קולט (Colt) הרשמי</title>
+    
+    <!-- SEO Meta Tags -->
+    <!-- 1 - תיאור (Meta Description) - עד 155 תווים -->
+    <meta name="description" content="רוצים לדעת איך להתקיף בברול סטארס ולנצח בכל משחק? היכנסו למדריך המקצועי לשיפור הדיוק, כיוון ידני וטקטיקות התקפה מתקדמות עם קולט!">
+    
+    <!-- 2 - קנוניקל (Canonical URL) -->
+    <link rel="canonical" href="https://lets-play.site/brawl-stars/guides/מדריך-התקפה-של-קולט">
+    
+    <!-- 3 - מילות מפתח (Meta Keywords) -->
+    <meta name="keywords" content="ברול סטארס, קולט ברול סטארס, איך להתקיף בברול סטארס, מדריך ברול סטארס, Colt Brawl Stars, כיוון ידני, טיפים לברול סטארס, משחקי מובייל">
+
+    <style>
+        :root {
+            --primary-color: #f15a24;
+            --secondary-color: #00aeef;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #ffffff;
+            --text-muted: #b3b3b3;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(114deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(114deg, #1f1c2c 0%, #5e4fab 50%, #4e11c0 100%);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border-top: 5px solid var(--primary-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 1.6rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-right: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #e0e0e0;
+        }
+
+        .highlight-box {
+            background-color: rgba(241, 90, 36, 0.1);
+            border-right: 4px solid var(--primary-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .seo-meta-info {
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+            border: 1px dashed #555;
+        }
+
+        .seo-meta-info code {
+            color: #ffde59;
+            font-family: monospace;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .guide-container { padding: 15px; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="guide-container">
+        
+
+
+        <!-- תחילת התוכן וההיררכיה -->
+        <h1>איך להתקיף בברול סטארס כמו מקצוען: מדריך התקפה לקולט (Colt)</h1>
+        
+        <p>אם אתם רוצים לדעת <strong>איך להתקיף בברול סטארס</strong> בצורה יעילה ולהעלות גביעים במהירות, הגעתם למקום הנכון. ברול סטארס הוא משחק זירה דינמי שבו לכל דמות (Brawler) יש מכניקת ירי ייחודית. במדריך זה נתמקד באחת הדמויות האייקוניות והחזקות ביותר במשחק – <strong>קולט (Colt)</strong>. קולט הוא דמות מסוג Damage Dealer שמסוגלת לחסל אויבים בשניות, בתנאי שמבינים איך להשתמש בכוח האש שלו בצורה נכונה.</p>
+
+        <h2>הבנת מכניקת הירי של קולט בברול סטארס</h2>
+        <p>כדי לבצע התקפה מושלמת, קודם כל צריך להבין איך הדמות שלכם עובדת. קולט יורה צרור של 6 קליעים בקו ישר לטווח ארוך מאוד. בניגוד לדמויות שמפזרות נזק בשטח רחב (כמו שלי או פוקו), קולט דורש דיוק כירורגי. אם תפספסו, לא תעשו נזק בכלל. אם תפגעו בכל הצרור, אתם תמחקו כמעט כל דמות שעומדת מולכם.</p>
+
+        <h2>טיפים פרקטיים: איך להתקיף בצורה יעילה וטובה?</h2>
+        <p>כדי לשפר את אחוזי הפגיעה שלכם עם קולט ועם דמויות צלפים אחרות בברול סטארס, אמצו את עקרונות המפתח הבאים:</p>
+        
+        <h3>1. תגידו שלום ל-Auto-Aim (ירי אוטומטי)</h3>
+        <p>הטעות הגדולה ביותר של שחקנים מתחילים היא לחיצה מהירה על כפתור הירי (Auto-Aim). ירי אוטומטי מכוון למקום שבו האויב נמצא <em>באותו רגע</em>. מאחר והקליעים של קולט לוקחים זמן להגיע ליעד, אויב בתנועה פשוט יחמוק מהם בקלות. השתמשו ב-Auto-Aim אך ורק אם האויב תקוע בקיר, נע בקו ישר אליכם, או נמצא ממש קרוב אליכם (טווח אפס).</p>
+
+        <h3>2. שליטה בטכניקת כיוון ידני (Manual Aim) וניבוי תנועה</h3>
+        <p>התקפה יעילה בברול סטארס מבוססת על ניבוי תנועת היריב (Leading your shots). גררו את כפתור הירי וכוונו את קו הירי מעט <strong>לפני</strong> המקום שבו האויב נמצא, לכיוון אליו הוא רץ. ככל שהמרחק גדול יותר, כך תצטרכו "לנבא" רחוק יותר קדימה.</p>
+
+        <div class="highlight-box">
+            <strong>טיפ זהב של מקצוענים:</strong> אל תזיזו רק את כפתור הירי! תאמו את כיוון הריצה של קולט עם כיוון הירי שלכם. אם תרוצו לאותו כיוון שהאויב בורח אליו תוך כדי שאתם יורים, "תמתחו" את קו הקליעים שלכם ותגרמו ליותר קליעים לפגוע במטרה.
+        </div>
+
+        <h3>3. ניהול תחמושת ושמירה על מרחק</h3>
+        <p>קולט הוא דמות "פריכה" (Low Health). התפקיד שלכם הוא לנצל את הטווח הארוך שלו כדי להציק לאויבים מרחוק (Zone control). לעולם אל תבזבזו את כל שלושת ה-Ammo (מדדי התחמושת) שלכם בבת אחת אם אתם לא בטוחים בפגיעה. שמרו תמיד מד התקפה אחד זמין כדי להרחיק אויבים שמנסים להתקרב אליכם במפתיע.</p>
+
+        <h2>איך להשתמש בסופר (Super) של קולט למהפך במשחק</h2>
+        <p>הסופר של קולט, Bullet Storm, יורה צרור מסיבי ומהיר של קליעים גדולים יותר שמסוגלים <strong>להרוס קירות ומכשולים</strong>. השימוש בסופר צריך להיות אסטרטגי:</p>
+        <ul>
+            <li><strong>פתיחת המפה:</strong> אם הקבוצה היריבה משתמשת במכשולים כדי להתחבא (כמו דמויות זורקים - Dynamike או Barley), השתמשו בסופר כדי להשמיד את המחסה שלהם ולהשאיר אותם חשופים לטווח הארוך שלכם.</li>
+            <li><strong>ביטול יכולות:</strong> הנזק המסיבי של הסופר יכול לעצור התקדמות של טנקים (כמו El Primo או Frank) לפני שהם מגיעים אליכם.</li>
+        </ul>
+
+        <h2>סיכום ומסקנות</h2>
+        <p>למידה של <strong>איך להתקיף בברול סטארס</strong> בצורה נכונה דורשת תרגול, במיוחד עם דמות מבוססת דיוק כמו קולט. ברגע שתעברו לכיוון ידני, תלמדו לקרוא את תנועת היריבים שלכם ותנצלו את הטווח המקסימלי שלכם, אתם תראו איך אחוז הניצחונות שלכם מזנק ואיך אתם הופכים לשחקנים המובילים (Star Player) בכל סבב משחק.</p>
+        
+    </div>
+
+</body>
+</html>
