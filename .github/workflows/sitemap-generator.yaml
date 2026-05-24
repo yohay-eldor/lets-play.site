@@ -16,7 +16,7 @@ jobs:
       with:
         base-url-path: https://lets-play.site/ # הכתובת המעודכנת לפי הדומיין שלך
         include-html-extension: false
-        exclude-paths: 404.html # הוסף לכאן קבצי HTML שאתה לא רוצה שיסרקו, מופרדים בפסיק
+        exclude-paths: 404.html,googlec6d425a60261d9bb.html # הוסף לכאן קבצי HTML שאתה לא רוצה שיסרקו, מופרדים בפסיק
 
     - name: Sitemap Generation Report
       run: |
