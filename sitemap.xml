@@ -1,75 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://lets-play.site/</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/pro-dictionary</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/tier-list</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/איך-להשיג-היפרצארג-בבראול-סטארס</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/איך-להשיג-יהלומים-בחינם-בבראול-סטארס</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/איך-לעלות-גביעים-מהר</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/איך-מקבלים-יוקרה-בברול-סטארס</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/בלינג-בחינם</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/מדריך-התקפה-של-קולט</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/מדריך-מורטיס-ברול-סטארס</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/מדריך-קולט-ברול-סטארס</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/guides/שיפור-אומנות-הסוואה</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/brawlers/crow/this-is-crow</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/brawlers/leon/this-is-leon</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/brawlers/mortis/</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/brawlers/mortis/this-is-mortis</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
-<url>
-<loc>https://lets-play.site/brawl-stars/brawlers/spike/this-is-spike</loc>
-<lastmod>2026-05-26T12:35:58+03:00</lastmod>
-</url>
+  <url>
+    <loc>https://lets-play.site/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lets-play.site/googlec6d425a60261d9bb.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
