@@ -1,4 +1,4 @@
-name: Generate Sitemap
+name: Generate Index
 
 on:
   push:
@@ -6,9 +6,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  sitemap:
+  index:
     runs-on: ubuntu-latest
-    
+
+    concurrency:
+      group: git-push
+      cancel-in-progress: false
+
     permissions:
       contents: write
 
@@ -16,29 +20,86 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4.2.2
 
-    - name: Generate Sitemap
-      uses: cicirello/generate-sitemap@v1
-      with:
-        base-url-path: https://lets-play.site/
-        drop-html-extension: true
-        exclude-paths: 404.html,googlec6d425a60261d9bb.html
-
-    - name: Sitemap Generation Report
+    - name: Generate guides index
       run: |
-        echo "✅ דפים שנכנסו ל-Sitemap:"
-        grep "<loc>" sitemap.xml | sed 's/<loc>//g; s/<\/loc>//g' || echo "לא נמצאו קבצים"
-        echo "סה״כ: $(grep -c '<loc>' sitemap.xml || echo 0) דפים"
+        DIR="brawl-stars/guides"
+        OUTPUT="$DIR/index.html"
 
-    - name: Commit and Push Sitemap
+        # בונים את רשימת הקישורים
+        LINKS=""
+        for file in "$DIR"/*.html; do
+          filename=$(basename "$file")
+          # דלג על index.html עצמו
+          [ "$filename" = "index.html" ] && continue
+          # שלוף את הכותרת מה-<title>
+          title=$(grep -oP '(?<=<title>)[^<]+' "$file" | head -1)
+          # אם אין title, השתמש בשם הקובץ
+          [ -z "$title" ] && title="$filename"
+          LINKS="$LINKS\n        <li><a href=\"$filename\">$title</a></li>"
+        done
+
+        # כתוב את ה-index.html
+        cat > "$OUTPUT" << EOF
+        <!DOCTYPE html>
+        <html lang="he" dir="rtl">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>מדריכי ברול סטארס | lets-play.site</title>
+          <meta name="description" content="כל המדריכים לברול סטארס במקום אחד">
+          <link rel="canonical" href="https://lets-play.site/brawl-stars/guides/">
+          <link rel="icon" type="image/png" href="/favicon-maayan2.png"/>
+          <script src="/global-head.js"></script>
+          <style>
+            :root {
+              --primary-color: #ffcc00;
+              --secondary-color: #ff4500;
+              --bg-color: #121214;
+              --card-bg: #1e1e24;
+              --text-color: #ffffff;
+            }
+            body {
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              background-color: var(--bg-color);
+              color: var(--text-color);
+              margin: 0;
+              padding: 20px;
+            }
+            .container {
+              max-width: 800px;
+              margin: 0 auto;
+              background: var(--card-bg);
+              padding: 30px;
+              border-radius: 12px;
+              border-top: 5px solid var(--primary-color);
+            }
+            h1 { color: var(--primary-color); }
+            ul { padding-right: 25px; line-height: 2.2; }
+            a { color: var(--primary-color); text-decoration: none; }
+            a:hover { text-decoration: underline; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <h1>מדריכי ברול סטארס</h1>
+            <ul>
+        $(echo -e "$LINKS")
+            </ul>
+          </div>
+        </body>
+        </html>
+        EOF
+
+    - name: Commit and Push Index
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "action@github.com"
-        git add sitemap.xml
+        git add brawl-stars/guides/index.html
         if git diff --staged --quiet; then
-          echo "ℹ️ אין שינויים, אין צורך ב-commit"
+          echo "ℹ️ אין שינויים ב-index, אין צורך ב-commit"
         else
-          git commit -m "chore: automated sitemap update [skip ci]"
+          git commit -m "chore: automated index update [skip ci]"
           git pull --rebase origin main
           git push
-          echo "✅ sitemap עודכן בהצלחה"
+          echo "✅ index עודכן בהצלחה"
         fi
