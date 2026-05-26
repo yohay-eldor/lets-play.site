@@ -14,13 +14,13 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v4.2.2  # ✅ תוקן: Node.js 24 תואם
+      uses: actions/checkout@v4.2.2
 
     - name: Generate Sitemap
       uses: cicirello/generate-sitemap@v1
       with:
         base-url-path: https://lets-play.site/
-        drop-html-extension: true        # ✅ תוקן: שם הפרמטר החדש
+        drop-html-extension: true
         exclude-paths: 404.html,googlec6d425a60261d9bb.html
 
     - name: Sitemap Generation Report
@@ -38,6 +38,7 @@ jobs:
           echo "ℹ️ אין שינויים, אין צורך ב-commit"
         else
           git commit -m "chore: automated sitemap update [skip ci]"
+          git pull --rebase origin main
           git push
           echo "✅ sitemap עודכן בהצלחה"
         fi
