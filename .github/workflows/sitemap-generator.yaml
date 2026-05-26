@@ -1,34 +1,52 @@
 name: Generate Sitemap
+
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main # ודא שזה שם הענף הראשי שלך (main או master)
+
 jobs:
   sitemap:
     runs-on: ubuntu-latest
+    
+    # השורה הזו פותרת את שגיאה 128 ומאפשרת לשרת לעדכן את הקבצים שלך!
+    permissions:
+      contents: write
+
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
-    - name: Generate Sitemap
-      uses: cicirello/generate-sitemap@v1
-      with:
-        base-url-path: https://lets-play.site/ # הכתובת המעודכנת לפי הדומיין שלך
-        include-html-extension: false
-        exclude-paths: 404.html,googlec6d425a60261d9bb.html # הוסף לכאן קבצי HTML שאתה לא רוצה שיסרקו, מופרדים בפסיק
-    - name: Sitemap Generation Report
-      run: |
-        echo "✅ קבצים שנסרקו ונכנסו בהצלחה ל-Sitemap:"
-        grep "<loc>" sitemap.xml | sed 's/<loc>//g; s/<\/loc>//g' || echo "לא נמצאו קבצים"
-        echo "---"
-        echo "ℹ️ קבצי מערכת (CNAME, README) וקבצי קוד (JS/CSS) נדחו אוטומטית כי הם אינם דפי אינטרנט."
-        echo "---"
-        echo "🔗 הקישור הישיר ל-Sitemap שלך:"
-        echo "https://lets-play.site/sitemap.xml"
-    - name: Commit and Push Sitemap
-      run: |
-        git config --global user.name "GitHub Action"
-        git config --global user.email "action@github.com"
-        git add sitemap.xml
-        git commit -m "Automated sitemap generation" || exit 0
-        git push
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
+      - name: Generate Sitemap XML (Pure Python)
+        run: |
+          python3 -c "
+          import os
+          from datetime import datetime
+          
+          url_base = 'https://lets-play.site/'
+          files = [f for f in os.listdir('.') if f.endswith('.html')]
+          
+          xml = '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n'
+          xml += '<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n'
+          
+          if 'index.html' in files:
+              files.remove('index.html')
+              files.insert(0, 'index.html')
+              
+          for file in files:
+              loc = url_base if file == 'index.html' else url_base + file
+              lastmod = datetime.now().strftime('%Y-%m-%d')
+              xml += f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n    <priority>0.8</priority>\n  </url>\n'
+          
+          xml += '</urlset>'
+          
+          with open('sitemap.xml', 'w', encoding='utf-8') as f:
+              f.write(xml)
+          "
 
+      - name: Commit and Push Sitemap
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git diff --quiet && git diff --staged --quiet || (git commit -m '🤖 עדכון מפת אתר אוטומטית' && git push)
