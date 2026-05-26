@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדריכי בראול סטארס - אינדקס מאמרים</title>
+    
+    <link rel="icon" type="image/png" href="/favicon-maayan2.png"/>
+    <script src="/global-head.js"></script>
+
+    <link rel="canonical" href="https://lets-play.site/brawl-stars/guides/index.html">
+    <meta name="keywords" content="מדריכי בראול סטארס, בראול סטארס טיפים, איך לשחק בראול סטארס, אסטרטגיות בראול סטארס, מדריך דמויות בראול סטארס, Brawl Stars guides, Brawl Stars tips">
+    <meta name="description" content="מרכז המדריכים הרשמי של בראול סטארס - מצאו מדריכים, טיפים וטריקים לכל הדמויות והעדכונים במשחק.">
+
+    <style>
+        :root {
+            --primary-color: #f15a24;
+            --secondary-color: #00aeef;
+            --dark-bg: linear-gradient(114deg, #1f1c2c 0%, #5e4fab 50%, #4e11c0 100%);
+            --light-bg: linear-gradient(114deg, #f5f7fa 0%, #c3cfe2 100%);
+            --card-dark: rgba(30, 30, 30, 0.6);
+            --card-light: rgba(255, 255, 255, 0.85);
+            --text-dark: #ffffff;
+            --text-light: #121212;
+            --text-muted-dark: #b3b3b3;
+            --text-muted-light: #555555;
+        }
+
+        /* ברירת מחדל - מצב כהה (כמו שביקשת, ניתן לשינוי בקלות למטה) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(114deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* קלאס למצב בהיר - משנה את הרקע הכללי והאלמנטים */
+        body.light-mode {
+            background: linear-gradient(114deg, #e0c3fc 0%, #8ec5fc 100%);
+            color: var(--text-light);
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--dark-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border-top: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        body.light-mode .guide-container {
+            background: var(--light-bg);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .header-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        body.light-mode .header-area {
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        /* כפתור החלפת מצב בהיר/כהה */
+        .theme-toggle {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .theme-toggle:hover { transform: scale(1.05); }
+
+        /* שורת החיפוש */
+        .search-box {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            border: 2px solid var(--secondary-color);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            box-sizing: border-box;
+            margin-bottom: 25px;
+            outline: none;
+            transition: all 0.3s;
+        }
+        body.light-mode .search-box {
+            background: rgba(255, 255, 255, 0.7);
+            color: #121212;
+        }
+        .search-box:focus {
+            box-shadow: 0 0 10px var(--secondary-color);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        body.light-mode .search-box:focus {
+            background: #ffffff;
+        }
+
+        /* רשימת המאמרים */
+        .articles-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .article-card {
+            background: var(--card-dark);
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            border-right: 4px solid var(--secondary-color);
+            transition: all 0.2s ease;
+            display: block;
+        }
+        body.light-mode .article-card {
+            background: var(--card-light);
+        }
+
+        .article-card:hover {
+            transform: translateX(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        body.light-mode .article-card:hover {
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .article-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+        body.light-mode .article-title {
+            color: #121212;
+        }
+
+        .article-desc {
+            font-size: 1rem;
+            color: var(--text-muted-dark);
+        }
+        body.light-mode .article-desc {
+            color: var(--text-muted-light);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted-dark);
+            display: none;
+        }
+        body.light-mode .no-results { color: var(--text-muted-light); }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .guide-container { padding: 15px; }
+            h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="guide-container">
+        <div class="header-area">
+            <h1>מדריכי בראול סטארס</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">מצב בהיר ☀️</button>
+        </div>
+        
+        <p>ברוכים הבאים למרכז המדריכים. כאן תמצאו את כל הטיפים, אסטרטגיות הדמויות והטריקים שיעזרו לכם לשלוט בזירה.</p>
+
+        <input type="text" id="searchInput" class="search-box" placeholder="חפשו מדריך... (לדוגמה: בלינג, קולט, גביעים)">
+
+        <div class="articles-list" id="articlesList">
+            <a href="בלינג-בחינם.html" class="article-card" data-title="איך משיגים ומנצלים בלינג פריטים קוסמטיים">
+                <div class="article-title">איך משיגים ומנצלים בלינג (Bling)? המדריך המלא לפריטים קוסמטיים</div>
+                <div class="article-desc">רוצים לדעת איך משיגים בלינג בבראול סטארס ומה עושים איתו? היכנסו למדריך המלא על Bling...</div>
+            </a>
+            </div>
+
+        <div id="noResults" class="no-results">לא נמצאו מדריכים המתאימים לחיפוש שלך.</div>
+    </div>
+
+    <script>
+        // מנגנון החיפוש בזמן אמת בתוך הדפדפן
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.article-card');
+        const noResults = document.getElementById('noResults');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+            let hasResults = false;
+
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                if (title.includes(query)) {
+                    card.style.display = 'block';
+                    hasResults = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            noResults.style.display = hasResults ? 'none' : 'block';
+        });
+
+        // מנגנון החלפת מצב בהיר/כהה שביקשת
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById('themeBtn');
+            
+            body.classList.toggle('light-mode');
+            
+            if(body.classList.contains('light-mode')) {
+                btn.innerText = "מצב כהה 🌙";
+                localStorage.setItem('theme', 'light');
+            } else {
+                btn.innerText = "מצב בהיר ☀️";
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // טעינת המצב המועדף על הגולש מהביקור הקודם
+        if(localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+            document.getElementById('themeBtn').innerText = "מצב כהה 🌙";
+        }
+    </script>
+</body>
+</html>
