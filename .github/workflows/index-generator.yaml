@@ -1,63 +1,44 @@
-name: Auto Update All Indexes Globals
+name: Generate Sitemap
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - '**/*.html'
-
-permissions:
-  contents: write
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  update-indexes:
+  sitemap:
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+    - name: Checkout Code
+      uses: actions/checkout@v4.2.2
 
-    - name: Scan and Update Indexes Dynamically
-      run: |
-        # מוצא את כל קבצי ה-index.html באתר שמכילים את תגית האוטומציה
-        find . -name "index.html" -not -path '*/.*' | while read -r index_path; do
-          
-          # אם הקובץ לא מכיל את תגית האוטומציה, נדלג עליו
-          if ! grep -q "" "$index_path"; then
-            continue
-          fi
-          
-          dir_path=$(dirname "$index_path")
-          echo "Processing index inside directory: $dir_path"
-          
-          ARTICLES_HTML=""
-          
-          # סריקת כל קבצי ה-HTML באותה תיקייה (חוץ מהאינדקס עצמו)
-          for file in "$dir_path"/*.html; do
-            filename=$(basename "$file")
-            if [ "$filename" != "index.html" ]; then
-              
-              # שליפת כותרת המאמר מתוך ה-title בלבד
-              title=$(grep -oP '(?<=<title>).*?(?=</title>)' "$file" | head -n 1)
-              if [ -z "$title" ]; then title=$filename; fi
-              
-              # בניית כרטיסייה נקייה - רק כותרת וקישור
-              CARD="<a href=\"$filename\" class=\"article-card\" data-title=\"$title\">\n<div class=\"article-title\">$title</div>\n</a>\n"
-              ARTICLES_HTML="${ARTICLES_HTML}${CARD}"
-            fi
-          done
-          
-          # הזרקה חכמה לקובץ האינדקס
-          awk -v insert="$ARTICLES_HTML" '
-            // { print; print insert; flag=1; next }
-            // { flag=0 }
-            !flag
-          ' "$index_path" > temp.html && mv temp.html "$index_path"
-        done
+    - name: Generate Sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://lets-play.site/
+        drop-html-extension: true
+        exclude-paths: 404.html,googlec6d425a60261d9bb.html
 
-    - name: Commit and Push Changes
+    - name: Sitemap Generation Report
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add *.html
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-updated directory indexes [skip ci]" && git push)
+        echo "✅ דפים שנכנסו ל-Sitemap:"
+        grep "<loc>" sitemap.xml | sed 's/<loc>//g; s/<\/loc>//g' || echo "לא נמצאו קבצים"
+        echo "סה״כ: $(grep -c '<loc>' sitemap.xml || echo 0) דפים"
+
+    - name: Commit and Push Sitemap
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git add sitemap.xml
+        if git diff --staged --quiet; then
+          echo "ℹ️ אין שינויים, אין צורך ב-commit"
+        else
+          git commit -m "chore: automated sitemap update [skip ci]"
+          git pull --rebase origin main
+          git push
+          echo "✅ sitemap עודכן בהצלחה"
+        fi
